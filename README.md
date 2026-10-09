@@ -120,3 +120,7 @@ This repository is a continuation of Diego Parrilla's original [`atarist-sidecar
 ## License
 
 The project is licensed under the GNU General Public License v3.0. The full license is accessible in the [LICENSE](LICENSE) file.
+
+## Native cartridge build
+
+Build the optional native guest with `python3 tools/build_native.py` (or `make falcon`). Set `SIDETNFS_TOOLCHAIN_IMAGE` to a cached Docker image containing m68k-atari-mint-gcc, vasm, vlink and Python 3. Output goes to `dist/native`. Use the matching native firmware; its host suite accepts `SIDETNFS_GUEST_DIR` pointing to this checkout.
